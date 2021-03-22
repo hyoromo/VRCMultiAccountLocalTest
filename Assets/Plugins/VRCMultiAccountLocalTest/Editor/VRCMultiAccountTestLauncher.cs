@@ -18,7 +18,7 @@ namespace VRCMultiAccountLocalTest.Editor
         /// LauncherScriptsフォルダまでのパスを返す
         /// </summary>
         /// <returns></returns>
-        private static string GeLauncherScriptsPath()
+        private static string GetLauncherScriptsPath()
         {
             var process = new Process();
             string dir = Directory.GetCurrentDirectory();
@@ -35,7 +35,7 @@ namespace VRCMultiAccountLocalTest.Editor
         [MenuItem("Tools/VRCMultiAccountLocalTest/All-SubAccounts")]
         static void LauncherAll()
         {
-            Process.Start($"{GeLauncherScriptsPath()}\\AllSubAccount.vbs");
+            Process.Start($"{GetLauncherScriptsPath()}\\AllSubAccount.vbs");
         }
 
         /// <summary>
@@ -44,7 +44,7 @@ namespace VRCMultiAccountLocalTest.Editor
         [MenuItem("Tools/VRCMultiAccountLocalTest/SubAccounts/1")]
         static void Launcher1()
         {
-            Process.Start($"{GeLauncherScriptsPath()}\\SubAccount1.vbs");
+            Process.Start($"{GetLauncherScriptsPath()}\\SubAccount1.vbs");
         }
 
         /// <summary>
@@ -53,7 +53,7 @@ namespace VRCMultiAccountLocalTest.Editor
         [MenuItem("Tools/VRCMultiAccountLocalTest/SubAccounts/2")]
         static void Launcher2()
         {
-            Process.Start($"{GeLauncherScriptsPath()}\\SubAccount2.vbs");
+            Process.Start($"{GetLauncherScriptsPath()}\\SubAccount2.vbs");
         }
     }
 }

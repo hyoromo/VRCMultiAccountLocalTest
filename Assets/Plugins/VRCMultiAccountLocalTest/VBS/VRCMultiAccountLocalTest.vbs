@@ -9,8 +9,14 @@ subAccountCount = 2
 Dim laundherFolderName
 launcherFolderName = "LauncherScripts\"
 
-' 全サブアカウントのVRChat起動スクリプト作成
+' サブアカウントのスクリプトを格納するフォルダが無ければ新規作成
 Set objFile = CreateObject("Scripting.FileSystemObject")
+if objFile.FolderExists(launcherFolderName) = False Then
+  objFile.CreateFolder(launcherFolderName)
+end if
+
+
+' 全サブアカウントのVRChat起動スクリプト作成
 Set openRunAllFile = objFile.OpenTextFile(launcherFolderName & "AllSubAccount.vbs", 2, True)
 openRunAllFile.WriteLine "Set objShell = CreateObject(""WScript.Shell"")"
 
